@@ -31,7 +31,7 @@ func main() {
 	for l := range c {
 		// this is an IIF - Immediate Invoked Function
 		go func(link string) {
-			time.Sleep(2 * time.Second)
+			time.Sleep(10 * time.Second)
 			checkLink(link, c)
 		}(l)
 	}
