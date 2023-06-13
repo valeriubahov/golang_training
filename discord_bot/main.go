@@ -87,8 +87,6 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	fmt.Println(m.Content)
-
 	switch {
 	case strings.Contains(m.Content, "add"):
 		c := strings.ReplaceAll(m.Content, "add ", "")
