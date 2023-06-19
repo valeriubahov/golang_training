@@ -14,8 +14,6 @@ type Logger struct {
 	handler http.Handler
 }
 
-type Person interface{}
-
 func (l *Logger) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	start := time.Now()
 	l.handler.ServeHTTP(w, r)
